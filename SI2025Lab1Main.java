@@ -78,9 +78,10 @@ class TaskManager {
         // TODO: Implement sorting logic
     }
 
+
     // 4. Sort tasks by priority
     public void sortTasksByPriority() {
-        // TODO: Implement sorting by priority logic
+	tasks.sort(Comparator.comparing(Task::getPriority));
     }
 
     // 5. Filter tasks by category
@@ -118,9 +119,20 @@ public class SI2025Lab1Main {
         manager.addTask("Write report", Priority.HIGH, "Work");
         manager.addTask("Submit assignment", Priority.MEDIUM, "School");
         manager.addTask("Buy groceries", Priority.LOW, "Personal");
+	manager.addTask("Attend meeting", Priority.MEDIUM, "Work");
+        manager.addTask("Prepare presentation", Priority.HIGH, "Work");
 
         // MISSING: Calls to the new methods that will be implemented
 
+	// Пред сортирање
+        System.out.println("Before sorting by priority:");
+        manager.printTasks();
+
+        // Сортирај задачи по приоритет
+        manager.sortTasksByPriority();
+
+        // После сортирање
+        System.out.println("\nAfter sorting by priority:");
         manager.printTasks();
     }
 }
