@@ -1,0 +1,19 @@
+*   a03cb7b Resolved merge conflict between master and 11-count-tasks-per-category
+|\  
+| * cd16fe6 Implement countTasksPerCategory() method to count tasks by category
+* |   077101b Merge pull request #15 from nadicap5/8-sort-tasks-by-priority
+|\ \  
+| * \   89820ef Resolved merge conflict between master and 8-sort-tasks-by-priority
+| |\ \  
+| |/ /  
+|/| |   
+* | |   1819bc1 Merge pull request #14 from nadicap5/5-remove-a-task-by-name
+|\ \ \  
+| |_|/  
+|/| |   
+| * | fbfc30b Implement removeTask() method in TaskManager
+|/ /  
+| * 2c789d9 Implement sortTasksByPriority method
+|/  
+* 5c27751 Add starter code
+* 4e1dfa8 Initial commit

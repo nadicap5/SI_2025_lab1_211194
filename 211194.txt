@@ -1,0 +1,178 @@
+Дел 2: Софтверски развој со користење на Git систем за контрола на верзии
+
+13. - Креирам tracker гранки
+Nadica P@DESKTOP-OO9N76F MINGW64 ~/SI_2025_lab1_211194 (master)
+$ git fetch origin            
+From https://github.com/nadicap5/SI_2025_lab1_211194
+ * [new branch]      11-count-tasks-per-category -> origin/11-count-tasks-per-category
+ * [new branch]      5-remove-a-task-by-name -> origin/5-remove-a-task-by-name
+ * [new branch]      8-sort-tasks-by-priority -> origin/8-sort-tasks-by-priority
+
+14. - Со оваа команда се префрлам на гранката за првиот issue 
+Nadica P@DESKTOP-OO9N76F MINGW64 ~/SI_2025_lab1_211194 (master)
+$ git checkout -b 5-remove-a-task-by-name origin/5-remove-a-task-by-name
+branch '5-remove-a-task-by-name' set up to track 'origin/5-remove-a-task-by-name'.
+Switched to a new branch '5-remove-a-task-by-name'
+
+- Со командата git branch се прикажуваат сите локални гранки, при што ѕвездичката (*) означува дека моментално се наоѓам на гранката 5-remove-a-task-by-name.
+Nadica P@DESKTOP-OO9N76F MINGW64 ~/SI_2025_lab1_211194 (5-remove-a-task-by-name)
+$ git branch
+* 5-remove-a-task-by-name
+  master
+
+15. - Имплементација на соодветната функција за тој issue.
+Nadica P@DESKTOP-OO9N76F MINGW64 ~/SI_2025_lab1_211194 (5-remove-a-task-by-name)
+$ nano SI2025Lab1Main.java
+
+16. - Со помош на командата git add . се додаваат измените во локалниот репозиториум.
+Nadica P@DESKTOP-OO9N76F MINGW64 ~/SI_2025_lab1_211194 (5-remove-a-task-by-name)
+$ git add .
+
+- Правам commit и на тој начин се зачувуваат промените во локалниот репозиториум.
+Nadica P@DESKTOP-OO9N76F MINGW64 ~/SI_2025_lab1_211194 (5-remove-a-task-by-name)
+$ git commit -m "Implement removeTask() method in TaskManager"
+[5-remove-a-task-by-name fbfc30b] Implement removeTask() method in TaskManager
+ 1 file changed, 9 insertions(+), 2 deletions(-)
+
+17. - Со оваа команда (git push origin 5-remove-a-task-by-name) се пренесуваат сите направени commit-и од локалната гранка 5-remove-a-task-by-name во истоимената гранка на оддалечениот репозиториум.
+Nadica P@DESKTOP-OO9N76F MINGW64 ~/SI_2025_lab1_211194 (5-remove-a-task-by-name)
+$ git push origin 5-remove-a-task-by-name
+Enumerating objects: 5, done.
+Counting objects: 100% (5/5), done.
+Delta compression using up to 6 threads
+Compressing objects: 100% (3/3), done.
+Writing objects: 100% (3/3), 557 bytes | 557.00 KiB/s, done.
+Total 3 (delta 1), reused 0 (delta 0), pack-reused 0 (from 0)
+remote: Resolving deltas: 100% (1/1), completed with 1 local object.
+To https://github.com/nadicap5/SI_2025_lab1_211194.git
+   5c27751..fbfc30b  5-remove-a-task-by-name -> 5-remove-a-task-by-name
+
+18. - Креирам Pull Request за да ја спојам гранката 5-remove-a-task-by-name со master.
+
+19. Чекорите од 14 до 18 се повторуваат и за останатите два issues.
+
+
+--------------------------8-sort-tasks-by-priority-----------------------------------------
+
+- Со оваа команда се префрлам на гранката за вториот issue.
+Nadica P@DESKTOP-OO9N76F MINGW64 ~/SI_2025_lab1_211194 (5-remove-a-task-by-name)
+$ git checkout 8-sort-tasks-by-priority
+
+Nadica P@DESKTOP-OO9N76F MINGW64 ~/SI_2025_lab1_211194 (8-sort-tasks-by-priority)
+$ git branch
+
+- Имплементација на соодветната функција за тој issue.
+Nadica P@DESKTOP-OO9N76F MINGW64 ~/SI_2025_lab1_211194 (8-sort-tasks-by-priority)
+$ nano SI2025Lab1Main.java
+
+- Со помош на командата git add . се додаваат измените во локалниот репозиториум.
+Nadica P@DESKTOP-OO9N76F MINGW64 ~/SI_2025_lab1_211194 (8-sort-tasks-by-priority)
+$ git add .
+
+- Правам commit и на тој начин се зачувуваат промените во локалниот репозиториум.
+$ git commit -m "Implement sortTasksByPriority() method in TaskManager"
+
+- Со оваа команда (git push origin 8-sort-tasks-by-priority) се пренесуваат сите направени commit-и од локалната гранка 8-sort-tasks-by-priority во истоимената гранка на оддалечениот репозиториум.
+Nadica P@DESKTOP-OO9N76F MINGW64 ~/SI_2025_lab1_211194 (8-sort-tasks-by-priority)
+$ git push origin 8-sort-tasks-by-priority
+
+- Креирам Pull Request за да ја спојам гранката 8-sort-tasks-by-priority со master.
+
+
+-------------------------------11-count-tasks-per-category---------------------------------
+
+- Со оваа команда се префрлам на гранката за третиот issue.
+Nadica P@DESKTOP-OO9N76F MINGW64 ~/SI_2025_lab1_211194 (8-sort-tasks-by-priority)
+$ git checkout 11-count-tasks-per-category
+
+Nadica P@DESKTOP-OO9N76F MINGW64 ~/SI_2025_lab1_211194 (11-count-tasks-per-category)
+$ git branch
+
+- Имплементација на соодветната функција за тој issue.
+Nadica P@DESKTOP-OO9N76F MINGW64 ~/SI_2025_lab1_211194 (11-count-tasks-per-category)
+$ nano SI2025Lab1Main.java
+
+- Со помош на командата git add . се додаваат измените во локалниот репозиториум.
+Nadica P@DESKTOP-OO9N76F MINGW64 ~/SI_2025_lab1_211194 (11-count-tasks-per-category)
+$ git add .
+
+- Правам commit и на тој начин се зачувуваат промените во локалниот репозиториум.
+Nadica P@DESKTOP-OO9N76F MINGW64 ~/SI_2025_lab1_211194 (11-count-tasks-per-category)
+$ git commit -m "Implement countTasksPerCategory() method in TaskManager"
+
+- Со оваа команда (git push origin 11-count-tasks-per-category) се пренесуваат сите направени commit-и од локалната гранка 11-count-tasks-per-category во истоимената гранка на оддалечениот репозиториум.
+Nadica P@DESKTOP-OO9N76F MINGW64 ~/SI_2025_lab1_211194 (11-count-tasks-per-category)
+$ git push origin 11-count-tasks-per-category
+
+- Креирам Pull Request за да ја спојам гранката 11-count-tasks-per-category со master.
+
+22.
+
+- Се префрлам од тековната гранка 8-sort-tasks-by-priority на главната гранка master.
+Nadica P@DESKTOP-OO9N76F MINGW64 ~/SI_2025_lab1_211194 (8-sort-tasks-by-priority)
+$ git checkout master
+Switched to branch 'master'
+Your branch is behind 'origin/master' by 5 commits, and can be fast-forwarded.
+  (use "git pull" to update your local branch)
+
+- Со оваа команда се презема најновиот код од далечинскиот репозиториум (origin/master) и ја ажурира локалната master гранка со најновите промени.
+Nadica P@DESKTOP-OO9N76F MINGW64 ~/SI_2025_lab1_211194 (master)
+$ git pull origin master
+From https://github.com/nadicap5/SI_2025_lab1_211194
+ * branch            master     -> FETCH_HEAD
+Updating 5c27751..077101b
+Fast-forward
+ SI2025Lab1Main.java | 26 +++++++++++++++++++++++---
+ 1 file changed, 23 insertions(+), 3 deletions(-)
+
+- Со оваа команда се обидувам да ја спојам гранката 11-count-tasks-per-category со master, но бидејќи има конфликт треба најпрво тоа да се реши.
+Nadica P@DESKTOP-OO9N76F MINGW64 ~/SI_2025_lab1_211194 (master)
+$ git merge 11-count-tasks-per-category
+Auto-merging SI2025Lab1Main.java
+CONFLICT (content): Merge conflict in SI2025Lab1Main.java
+Automatic merge failed; fix conflicts and then commit the result.
+
+- Оваа команда го прикажува тековниот статус на git (Потврда дека се наоѓам на master и дека има "unmerged paths").
+Nadica P@DESKTOP-OO9N76F MINGW64 ~/SI_2025_lab1_211194 (master|MERGING)
+$ git status
+On branch master
+Your branch is up to date with 'origin/master'.
+
+You have unmerged paths.
+  (fix conflicts and run "git commit")
+  (use "git merge --abort" to abort the merge)
+
+Unmerged paths:
+  (use "git add <file>..." to mark resolution)
+        both modified:   SI2025Lab1Main.java
+
+no changes added to commit (use "git add" and/or "git commit -a")
+
+- Ја отворам датотеката со цел рачно да го решам конфликтот.
+Nadica P@DESKTOP-OO9N76F MINGW64 ~/SI_2025_lab1_211194 (master|MERGING)
+$ nano SI2025Lab1Main.java
+
+- Оваа команда ги додава измените во датотеката SI2025Lab1Main.java и ја подготвува датотеката за следен commit.
+Nadica P@DESKTOP-OO9N76F MINGW64 ~/SI_2025_lab1_211194 (master|MERGING)
+$ git add SI2025Lab1Main.java
+
+- Со оваа команда се создава нов commit со порака ("Resolved merge conflict between master and 11-count-tasks-per-category") која означува дека конфликтот помеѓу master и 11-count-tasks-per-category е решен.
+Nadica P@DESKTOP-OO9N76F MINGW64 ~/SI_2025_lab1_211194 (master|MERGING)
+$ git commit -m "Resolved merge conflict between master and 11-count-tasks-per-category"
+[master a03cb7b] Resolved merge conflict between master and 11-count-tasks-per-category
+
+23.
+- Оваа команда ја испраќа мојата локална верзија на гранката master до оддалечениот репозиториум на GitHub.
+Nadica P@DESKTOP-OO9N76F MINGW64 ~/SI_2025_lab1_211194 (master)
+$ git push origin master
+Enumerating objects: 7, done.
+Counting objects: 100% (7/7), done.
+Delta compression using up to 6 threads
+Compressing objects: 100% (3/3), done.
+Writing objects: 100% (3/3), 870 bytes | 870.00 KiB/s, done.
+Total 3 (delta 1), reused 0 (delta 0), pack-reused 0 (from 0)
+remote: Resolving deltas: 100% (1/1), completed with 1 local object.
+To https://github.com/nadicap5/SI_2025_lab1_211194.git
+   077101b..a03cb7b  master -> master
+
+
