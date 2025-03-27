@@ -98,8 +98,15 @@ class TaskManager {
 
     // 7. Count tasks per category
     public Map<String, Integer> countTasksPerCategory() {
-        // TODO: Implement counting logic
-        return new HashMap<>();
+	Map<String, Integer> categoryCount = new HashMap<>();
+    
+    	// Прегледувај ги сите задачи и преброј ги според категоријата
+    	for (Task task : tasks) {
+        	String category = task.getCategory();
+        	categoryCount.put(category, categoryCount.getOrDefault(category, 0) + 1);
+    	}	
+    
+    	return categoryCount;
     }
 
     // 8. Mark a task as completed by name
@@ -119,6 +126,7 @@ public class SI2025Lab1Main {
         manager.addTask("Write report", Priority.HIGH, "Work");
         manager.addTask("Submit assignment", Priority.MEDIUM, "School");
         manager.addTask("Buy groceries", Priority.LOW, "Personal");
+	
 	manager.addTask("Attend meeting", Priority.MEDIUM, "Work");
         manager.addTask("Prepare presentation", Priority.HIGH, "Work");
 
@@ -144,4 +152,18 @@ public class SI2025Lab1Main {
         
 	manager.printTasks();
     }
+
+	manager.addTask("Prepare presentation", Priority.HIGH, "Work");
+
+        // MISSING: Calls to the new methods that will be implemented
+	         
+        // Повик за броење на задачите по категорија
+        Map<String, Integer> categoryCount = manager.countTasksPerCategory();
+        
+        // Испечати ги резултатите
+        System.out.println("Tasks count per category:");
+        for (Map.Entry<String, Integer> entry : categoryCount.entrySet()) {
+            System.out.println(entry.getKey() + ": " + entry.getValue());
+        }
+     }
 }
