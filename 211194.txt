@@ -175,4 +175,29 @@ remote: Resolving deltas: 100% (1/1), completed with 1 local object.
 To https://github.com/nadicap5/SI_2025_lab1_211194.git
    077101b..a03cb7b  master -> master
 
+25.
+- Со оваа команда git add logs.txt 211194.txt, овие датотеки се додаваат во индексот (или staging area) на Git. (Индексот е место каде се складираат сите промени кои ќе бидат вклучени во следниот commit.)
+Nadica P@DESKTOP-OO9N76F MINGW64 ~/SI_2025_lab1_211194 (master)
+$ git add logs.txt 211194.txt
 
+- Со оваа команда се создава commit со порака "Final commit", што ги зачувува промените направени во датотеките logs.txt и 211194.txt.
+Nadica P@DESKTOP-OO9N76F MINGW64 ~/SI_2025_lab1_211194 (master)
+$ git commit -m "Final commit"
+[master cf41304] Final commit
+ 2 files changed, 197 insertions(+)
+ create mode 100644 211194.txt
+ create mode 100644 logs.txt
+
+
+26.
+- Синхронизација на гранката master со оддалечениот репозиториум.
+Nadica P@DESKTOP-OO9N76F MINGW64 ~/SI_2025_lab1_211194 (master)
+$ git push origin master
+Enumerating objects: 5, done.
+Counting objects: 100% (5/5), done.
+Delta compression using up to 6 threads
+Compressing objects: 100% (4/4), done.
+Writing objects: 100% (4/4), 2.96 KiB | 2.96 MiB/s, done.
+Total 4 (delta 0), reused 0 (delta 0), pack-reused 0 (from 0)
+To https://github.com/nadicap5/SI_2025_lab1_211194.git
+   a03cb7b..cf41304  master -> master
