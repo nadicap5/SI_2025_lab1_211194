@@ -201,3 +201,59 @@ Writing objects: 100% (4/4), 2.96 KiB | 2.96 MiB/s, done.
 Total 4 (delta 0), reused 0 (delta 0), pack-reused 0 (from 0)
 To https://github.com/nadicap5/SI_2025_lab1_211194.git
    a03cb7b..cf41304  master -> master
+
+
+Дел3: Forking Git Workflow
+
+27. 
+- Направив fork од репозиториумот https://github.com/stefanandonov/SI_2025_lab1_151020.
+
+28. 
+- Со командата $ git clone https://github.com/nadicap5/SI_2025_lab1_151020.git, fork-от го клонирав на мојот компјутер.
+Nadica P@DESKTOP-OO9N76F MINGW64 ~
+$ git clone https://github.com/nadicap5/SI_2025_lab1_151020.git
+Cloning into 'SI_2025_lab1_151020'...
+remote: Enumerating objects: 26, done.
+remote: Counting objects: 100% (3/3), done.
+remote: Compressing objects: 100% (3/3), done.
+remote: Total 26 (delta 1), reused 0 (delta 0), pack-reused 23 (from 1)
+Receiving objects: 100% (26/26), 5.56 KiB | 1.85 MiB/s, done.
+Resolving deltas: 100% (7/7), done.
+
+29. 
+- Со оваа команда го менувам работниот директориум на оној во кој се наоѓа проектот ко што го клонирав (SI_2025_lab1_151020).
+Nadica P@DESKTOP-OO9N76F MINGW64 ~
+$ cd SI_2025_lab1_151020
+
+- Наредно креирам текстуална датотека со име 211194.txt и во неа го запишувам текстот (моето име и презиме).
+Nadica P@DESKTOP-OO9N76F MINGW64 ~/SI_2025_lab1_151020 (master)
+$ echo "Nadica Petkovska" > 211194.txt
+
+- Ја додавам датотеката 211194.txt во т.н. staging area.
+Nadica P@DESKTOP-OO9N76F MINGW64 ~/SI_2025_lab1_151020 (master)
+$ git add 211194.txt
+warning: in the working copy of '211194.txt', LF will be replaced by CRLF the next time Git touches it
+
+- Правам commit и на тој начин се зачувуваат промените во локалниот репозиториум.
+Nadica P@DESKTOP-OO9N76F MINGW64 ~/SI_2025_lab1_151020 (master)
+$ git commit -m "Add file"
+[master c927004] Add file
+ 1 file changed, 1 insertion(+)
+ create mode 100644 211194.txt
+
+30.
+- Со оваа команда се испраќаат сите локални промени назад на GitHub.
+Nadica P@DESKTOP-OO9N76F MINGW64 ~/SI_2025_lab1_151020 (master)
+$ git push origin master
+Enumerating objects: 4, done.
+Counting objects: 100% (4/4), done.
+Delta compression using up to 6 threads
+Compressing objects: 100% (2/2), done.
+Writing objects: 100% (3/3), 329 bytes | 329.00 KiB/s, done.
+Total 3 (delta 1), reused 0 (delta 0), pack-reused 0 (from 0)
+remote: Resolving deltas: 100% (1/1), completed with 1 local object.
+To https://github.com/nadicap5/SI_2025_lab1_151020.git
+   bb2576c..c927004  master -> master
+
+31.
+- Откако ги завршив со сите промени и ги push-нав на мојот fork-нат репозиториум, го отворив тој репозиториум на GitHub и кликнав на копчето "Contribute" → "Open pull request", со што иницирав pull request кон оригиналниот репозиториум (stefanandonov/SI_2025_lab1_151020). Со ова поднесувам барање мојата датотека 211194.txt да се вметне во главниот проект. Во полето за наслов го напишав само мојот број на индекс.
