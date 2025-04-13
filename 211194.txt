@@ -106,9 +106,7 @@ $ git push origin 11-count-tasks-per-category
 
 - Креирам Pull Request за да ја спојам гранката 11-count-tasks-per-category со master.
 
-22.
-
-- Се префрлам од тековната гранка 8-sort-tasks-by-priority на главната гранка master.
+22. - Се префрлам од тековната гранка 8-sort-tasks-by-priority на главната гранка master.
 Nadica P@DESKTOP-OO9N76F MINGW64 ~/SI_2025_lab1_211194 (8-sort-tasks-by-priority)
 $ git checkout master
 Switched to branch 'master'
@@ -161,8 +159,7 @@ Nadica P@DESKTOP-OO9N76F MINGW64 ~/SI_2025_lab1_211194 (master|MERGING)
 $ git commit -m "Resolved merge conflict between master and 11-count-tasks-per-category"
 [master a03cb7b] Resolved merge conflict between master and 11-count-tasks-per-category
 
-23.
-- Оваа команда ја испраќа мојата локална верзија на гранката master до оддалечениот репозиториум на GitHub.
+23. - Оваа команда ја испраќа мојата локална верзија на гранката master до оддалечениот репозиториум на GitHub.
 Nadica P@DESKTOP-OO9N76F MINGW64 ~/SI_2025_lab1_211194 (master)
 $ git push origin master
 Enumerating objects: 7, done.
@@ -175,8 +172,7 @@ remote: Resolving deltas: 100% (1/1), completed with 1 local object.
 To https://github.com/nadicap5/SI_2025_lab1_211194.git
    077101b..a03cb7b  master -> master
 
-25.
-- Со оваа команда git add logs.txt 211194.txt, овие датотеки се додаваат во индексот (или staging area) на Git. (Индексот е место каде се складираат сите промени кои ќе бидат вклучени во следниот commit.)
+25. - Со оваа команда git add logs.txt 211194.txt, овие датотеки се додаваат во индексот (или staging area) на Git. (Индексот е место каде се складираат сите промени кои ќе бидат вклучени во следниот commit.)
 Nadica P@DESKTOP-OO9N76F MINGW64 ~/SI_2025_lab1_211194 (master)
 $ git add logs.txt 211194.txt
 
@@ -189,8 +185,7 @@ $ git commit -m "Final commit"
  create mode 100644 logs.txt
 
 
-26.
-- Синхронизација на гранката master со оддалечениот репозиториум.
+26. - Синхронизација на гранката master со оддалечениот репозиториум.
 Nadica P@DESKTOP-OO9N76F MINGW64 ~/SI_2025_lab1_211194 (master)
 $ git push origin master
 Enumerating objects: 5, done.
@@ -205,11 +200,9 @@ To https://github.com/nadicap5/SI_2025_lab1_211194.git
 
 Дел3: Forking Git Workflow
 
-27. 
-- Направив fork од репозиториумот https://github.com/stefanandonov/SI_2025_lab1_151020.
+27. - Направив fork од репозиториумот https://github.com/stefanandonov/SI_2025_lab1_151020.
 
-28. 
-- Со командата $ git clone https://github.com/nadicap5/SI_2025_lab1_151020.git, fork-от го клонирав на мојот компјутер.
+28. - Со командата $ git clone https://github.com/nadicap5/SI_2025_lab1_151020.git, fork-от го клонирав на мојот компјутер.
 Nadica P@DESKTOP-OO9N76F MINGW64 ~
 $ git clone https://github.com/nadicap5/SI_2025_lab1_151020.git
 Cloning into 'SI_2025_lab1_151020'...
@@ -220,8 +213,7 @@ remote: Total 26 (delta 1), reused 0 (delta 0), pack-reused 23 (from 1)
 Receiving objects: 100% (26/26), 5.56 KiB | 1.85 MiB/s, done.
 Resolving deltas: 100% (7/7), done.
 
-29. 
-- Со оваа команда го менувам работниот директориум на оној во кој се наоѓа проектот ко што го клонирав (SI_2025_lab1_151020).
+29. - Со оваа команда го менувам работниот директориум на оној во кој се наоѓа проектот ко што го клонирав (SI_2025_lab1_151020).
 Nadica P@DESKTOP-OO9N76F MINGW64 ~
 $ cd SI_2025_lab1_151020
 
@@ -241,8 +233,7 @@ $ git commit -m "Add file"
  1 file changed, 1 insertion(+)
  create mode 100644 211194.txt
 
-30.
-- Со оваа команда се испраќаат сите локални промени назад на GitHub.
+30. - Со оваа команда се испраќаат сите локални промени назад на GitHub.
 Nadica P@DESKTOP-OO9N76F MINGW64 ~/SI_2025_lab1_151020 (master)
 $ git push origin master
 Enumerating objects: 4, done.
@@ -255,5 +246,5 @@ remote: Resolving deltas: 100% (1/1), completed with 1 local object.
 To https://github.com/nadicap5/SI_2025_lab1_151020.git
    bb2576c..c927004  master -> master
 
-31.
-- Откако ги завршив со сите промени и ги push-нав на мојот fork-нат репозиториум, го отворив тој репозиториум на GitHub и кликнав на копчето "Contribute" → "Open pull request", со што иницирав pull request кон оригиналниот репозиториум (stefanandonov/SI_2025_lab1_151020). Со ова поднесувам барање мојата датотека 211194.txt да се вметне во главниот проект. Во полето за наслов го напишав само мојот број на индекс.
+31. - Откако ги завршив со сите промени и ги push-нав на мојот fork-нат репозиториум, го отворив тој репозиториум на GitHub и кликнав на копчето "Contribute" → "Open pull request", со што иницирав pull request кон оригиналниот репозиториум (stefanandonov/SI_2025_lab1_151020). Со ова поднесувам барање мојата датотека 211194.txt да се вметне во главниот проект. Во полето за наслов го напишав само мојот број на индекс.
+
